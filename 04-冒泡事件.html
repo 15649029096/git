@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        // 如果addEventListener() 第三个参数是 true 那么在捕获阶段触发
+        // document -> html -> body -> father -> son
+        var son = document.querySelector('.son');
+        // 给son注册单击事件，第3个参数为true
+        son.addEventListener('click', function() {
+            alert('son');
+        }, true);
+        var father = document.querySelector('.father');
+        // 给father注册单击事件，第3个参数为true
+        father.addEventListener('click', function() {
+            alert('father');
+        }, true);
+        // 给document注册单击事件，第3个参数为true
+        document.addEventListener('click', function() {
+            alert('document');
+        }, true)
+    </script>
+</body>
+
+</html>
