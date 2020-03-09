@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <button>按钮</button>
+    <script>
+        var btn = document.getElementsByTagName('button');
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].onclick = function() {
+                for (let i = 0; i < btn.length; i++) {
+                    btn[i].style.backgroundColor = ''
+                }
+                this.style.backgroundColor = 'pink'
+            }
+
+        }
+    </script>
+</body>
+
+</html>
