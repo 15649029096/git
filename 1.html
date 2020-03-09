@@ -7,14 +7,20 @@
     <title>Document</title>
 </head>
 
+
 <body>
+    <div>123456</div>
+    <button>innertext</button>
+    <button>innerhtml</button>
     <script>
-        var arr = [10, 485, 77, 54, 454, 1, 4654, 413, 77]
-        var arr2 = arr.sort(function(a, b) {
-            return b - a
-        })
-        console.log(arr2)
-            // 高哦故事！！！！！！！！！！！！！！！！！！！！！！
+        var divv = document.getElementsByTagName('div');
+        var btn = document.getElementsByTagName('button');
+        btn[0].onclick = function() {
+            divv[0].innerText = '<div>gai11111111   ?    </div>'
+        }
+        btn[1].onclick = function() {
+            divv[0].innerHTML = '<div>gai22222222        22</div>'
+        }
     </script>
 </body>
 
